@@ -1,0 +1,107 @@
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 100vh;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color: #555555;
+  }
+
+  .img-logo {
+    margin: 10px;
+    width: 20%;
+    border-radius: 10px;
+  }
+
+  .img-login {
+    margin: 10px;
+    width: 80%;
+  }
+}
+
+.section-secondary {
+  background-color: #eeeeee;
+}
+
+.section-form {
+  .card-login {
+    /* width: 100%; */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 20px 0;
+    margin: 0;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  mat-form-field {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+mat-card-content {
+  padding: 0;
+  margin: 0;
+  width: 80%;
+}
+
+mat-card-actions,
+mat-card-footer {
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+}
+
+mat-card-actions > button,
+mat-card-footer > button {
+  width: 100%;
+}
+
+mat-divider {
+  padding: 0px 0px 15px 0px;
+}
+
+.btn-cadastrar {
+  color: #000000;
+}
+
+/* versão desktop */
+@media screen and (min-width: 1024px) {
+
+}
+/* versão tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+  .section-secondary {
+    display: none;
+  }
+}
+/* versão mobile */
+@media screen and (max-width: 767px) {
+
+  .section-secondary {
+    display: none;
+  }
+}

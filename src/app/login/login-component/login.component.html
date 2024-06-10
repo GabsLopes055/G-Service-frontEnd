@@ -1,0 +1,39 @@
+<main>
+  <section class="section-form">
+
+    <mat-card class="card-login" [class.mat-elevation-z8]="true">
+      <mat-card-header>
+        <mat-card-title>Faça o Login em sua conta</mat-card-title>
+        <!-- <mat-card-subtitle>Subtitle</mat-card-subtitle> -->
+      </mat-card-header>
+      <img class="img-logo" mat-card-image src="../../../assets/logo.jpeg" alt="">
+      <mat-card-content>
+        <form class="form">
+          <mat-form-field appearance="outline">
+            <mat-label>Usuário</mat-label>
+            <input matInput placeholder="Informe seu Usuário">
+
+            <!-- <mat-hint>Hint</mat-hint> -->
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input matInput placeholder="Forneça sua senha" type="password">
+            <!-- <mat-hint>Hint</mat-hint> -->
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Logar</button>
+      </mat-card-actions>
+      <mat-card-footer>
+        <mat-divider></mat-divider>
+        <button mat-button class="btn-cadastrar">Cadastrar-se</button>
+      </mat-card-footer>
+    </mat-card>
+  </section>
+  <section class="section-secondary">
+    <h1>Bem-vindo ao G-Service:</h1>
+    <h1>Simplificando o Suporte, Acelerando Soluções</h1>
+    <img class="img-login" src="../../../assets/login.svg" alt="">
+  </section>
+</main>
