@@ -13,7 +13,8 @@ section {
   width: 50vw;
   height: 100vh;
 
-  h1 {
+  h1,
+  mat-card-title {
     padding: 0;
     margin: 0;
     text-align: center;
@@ -93,6 +94,9 @@ mat-divider {
 /* versão tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
+  main {
+    background-color: #eeeeee
+  }
 
   .section-secondary {
     display: none;
@@ -100,6 +104,10 @@ mat-divider {
 }
 /* versão mobile */
 @media screen and (max-width: 767px) {
+
+  main {
+    background-color: #eeeeee
+  }
 
   .section-form {
     width: 100vw;
