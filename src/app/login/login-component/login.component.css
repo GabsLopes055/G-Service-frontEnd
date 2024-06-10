@@ -3,6 +3,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-image: url('../../../assets/grid.png');
 }
 
 section {
@@ -38,6 +39,7 @@ section {
 }
 
 .section-form {
+  background-image: url('../../../assets/grid.png');
   .card-login {
     /* width: 100%; */
     align-items: center;
