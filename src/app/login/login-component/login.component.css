@@ -101,6 +101,10 @@ mat-divider {
 /* versão mobile */
 @media screen and (max-width: 767px) {
 
+  .section-form {
+    width: 100vw;
+  }
+
   .section-secondary {
     display: none;
   }
