@@ -5,10 +5,16 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () =>
-      import('../app/login/login.module').then(
+      import('../app/login/module/login.module').then(
         (loginModule) => loginModule.LoginModule
       ),
-  },
+  }, {
+    path: 'dashboard',
+    loadChildren: () =>
+      import('../app/main/module/main.module').then(
+        (mainModule) => mainModule.MainModule
+      ),
+  }
 ];
 
 @NgModule({
