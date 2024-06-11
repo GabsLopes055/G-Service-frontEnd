@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+@use "@angular/material" as mat;
+@include mat.core();
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+
+
+$custom-app-primary: mat.define-palette(mat.$indigo-palette, 700);
+$custom-app-secondary: mat.define-palette(mat.$grey-palette, 900);
+$custom-app-warn: mat.define-palette(mat.$blue-grey-palette);
+
+$custom-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $custom-app-primary,
+      accent: $custom-app-secondary,
+      warn: $custom-app-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($custom-theme);
+@include mat.core-theme($custom-theme);
