@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from '../components/main/main.component';
+import { AngularMaterialModule } from '../../shared/angular-material/angular-material.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { MainComponent } from '../components/main/main.component';
   ],
   imports: [
     CommonModule,
-    MainRoutingModule
+    MainRoutingModule,
+    AngularMaterialModule
   ]
 })
 export class MainModule { }

@@ -1,1 +1,115 @@
-<p>main works!</p>
+<mat-toolbar color="accent">
+  <div class="container">
+    <span>G-Service</span>
+    <div class="toolbar">
+
+      <button mat-icon-button>
+        <mat-icon>home</mat-icon>
+      </button>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>person</mat-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Minhas Informações</button>
+        <button mat-menu-item>Sair</button>
+      </mat-menu>
+
+    </div>
+  </div>
+</mat-toolbar>
+
+<main>
+  <div class="cards-options">
+
+    <div class="formFind">
+      <mat-form-field appearance="outline">
+        <mat-label>Pesquisar</mat-label>
+        <input matInput placeholder="Pesquisar">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
+      <div class="formFindButton">
+        <button mat-icon-button color="primary">
+          <mat-icon matBadge="4" class="mat-18">notifications_active</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div class="car-main">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <h1><strong>Titulo 1</strong></h1>
+          </mat-card-title>
+          <mat-card-subtitle><strong>
+              <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s.</h4>
+            </strong></mat-card-subtitle>
+        </mat-card-header>
+        <!-- <mat-card-content>
+          Text content
+        </mat-card-content> -->
+        <mat-card-actions align="start">
+          <button mat-button>Action1</button>
+        </mat-card-actions>
+        <!-- <mat-card-footer>
+          Footer
+        </mat-card-footer> -->
+      </mat-card>
+    </div>
+
+    <br>
+
+    <div class="card">
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            <h1><strong>Abrir um chamado</strong></h1>
+          </mat-card-title>
+          <mat-card-subtitle><strong>
+              <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s.</h4>
+            </strong></mat-card-subtitle>
+        </mat-card-header>
+        <!-- <mat-card-content>
+          Text content
+        </mat-card-content> -->
+        <mat-card-actions align="start">
+          <button mat-flat-button color="accent">Abrir</button>
+        </mat-card-actions>
+        <!-- <mat-card-footer>
+          Footer
+        </mat-card-footer> -->
+      </mat-card>
+
+      <br>
+
+      <mat-card class="bg-card">
+        <mat-card-header>
+          <mat-card-title>
+            <h1><strong>Verificar status dos meus chamados</strong></h1>
+          </mat-card-title>
+          <mat-card-subtitle><strong>
+              <h4 class="bg-card">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s.</h4>
+            </strong></mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <!-- Text content -->
+        </mat-card-content>
+        <mat-card-actions align="start">
+          <button mat-flat-button color="accent">Verificar</button>
+        </mat-card-actions>
+        <!-- <mat-card-footer>
+          Footer
+        </mat-card-footer> -->
+      </mat-card>
+
+    </div>
+
+
+  </div>
+</main>

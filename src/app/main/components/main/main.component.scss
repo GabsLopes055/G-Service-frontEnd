@@ -1,0 +1,110 @@
+mat-toolbar {
+
+  justify-content: center;
+  // align-items: baseline;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    justify-content: space-between;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #E7E8EC;
+  min-height: 100%;
+  overflow-y: auto;
+
+  .cards-options {
+    margin: 20px;
+    width: 80vw;
+    // height: auto;
+  }
+
+  .formFind {
+
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    // background-color: aqua;
+  }
+
+  .formFind>mat-form-field {
+    width: 95%;
+  }
+
+  .car-main {
+    width: 100%;
+  }
+
+  .card {
+
+    display: flex;
+    justify-content: space-between;
+    // flex-wrap:  wrap;
+
+    mat-card {
+      padding: 20px;
+      align-items: center;
+
+      // margin: 20px;
+      width: 49.2%;
+    }
+
+  }
+
+
+
+  .bg-card {
+    color: white;
+    background-color: #1D2E5C;
+  }
+
+}
+
+/* versão tablet */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .container {
+    width: 100vw;
+    background-color: aqua;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card>mat-card {
+    width: 100% !important;
+    align-items: start !important;
+  }
+
+}
+
+/* versão mobile */
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100vw;
+    background-color: aqua;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card>mat-card {
+    width: 100% !important;
+    align-items: start !important;
+  }
+}
