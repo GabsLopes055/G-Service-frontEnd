@@ -27,28 +27,33 @@ main {
   }
 
   .formFind {
-
-    padding: 0;
-    margin: 0;
+    background-image: url("../../../../assets/grid.png");
+    padding: 20px 0px 0px 0px;
+    margin: 20px 0px 20px 0px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    // align-items: baseline !important;
+    // justify-content: space-between;
     // background-color: aqua;
   }
 
   .formFind>mat-form-field {
-    width: 95%;
+    width: 98%;
   }
 
   .car-main {
     width: 100%;
   }
 
+  .car-main > mat-card {
+    padding: 20px;
+  }
+
   .card {
 
     display: flex;
     justify-content: space-between;
-    // flex-wrap:  wrap;
 
     mat-card {
       padding: 20px;
@@ -75,6 +80,10 @@ main {
   .container {
     width: 100vw;
     background-color: aqua;
+  }
+
+  .cards-options {
+    width: 80vw !important;
   }
 
   .card {
