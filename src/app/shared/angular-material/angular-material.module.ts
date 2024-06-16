@@ -7,8 +7,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatBadgeModule} from '@angular/material/badge';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   imports: [CommonModule],
@@ -21,7 +22,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatStepperModule
   ],
 })
 export class AngularMaterialModule {}

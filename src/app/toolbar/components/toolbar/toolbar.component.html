@@ -1,6 +1,6 @@
 <mat-toolbar color="accent">
-  <div class="container">
-    <span>G-Service</span>
+  <div class="container" >
+    <span (click)="voltarParaDashboard()">G-Service</span>
     <div class="toolbar">
 
       <!-- <button mat-icon-button>
@@ -13,7 +13,7 @@
 
       <mat-menu #menu="matMenu">
         <button mat-menu-item>Minhas Informações</button>
-        <button mat-menu-item>Sair</button>
+        <button mat-menu-item routerLink="">Sair</button>
       </mat-menu>
 
     </div>

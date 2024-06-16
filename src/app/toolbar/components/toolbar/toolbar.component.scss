@@ -11,4 +11,8 @@ mat-toolbar {
     width: 80vw;
     justify-content: space-between;
   }
+
+  span {
+    cursor: pointer;
+  }
 }
