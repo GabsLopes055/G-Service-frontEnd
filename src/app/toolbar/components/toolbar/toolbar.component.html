@@ -1,0 +1,21 @@
+<mat-toolbar color="accent">
+  <div class="container">
+    <span>G-Service</span>
+    <div class="toolbar">
+
+      <!-- <button mat-icon-button>
+        <mat-icon>home</mat-icon>
+      </button> -->
+
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>person</mat-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Minhas Informações</button>
+        <button mat-menu-item>Sair</button>
+      </mat-menu>
+
+    </div>
+  </div>
+</mat-toolbar>

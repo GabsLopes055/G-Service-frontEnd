@@ -1,25 +1,4 @@
-<mat-toolbar color="accent">
-  <div class="container">
-    <span>G-Service</span>
-    <div class="toolbar">
-
-      <!-- <button mat-icon-button>
-        <mat-icon>home</mat-icon>
-      </button> -->
-
-      <button mat-icon-button [matMenuTriggerFor]="menu">
-        <mat-icon>person</mat-icon>
-      </button>
-
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>Minhas Informações</button>
-        <button mat-menu-item>Sair</button>
-      </mat-menu>
-
-    </div>
-  </div>
-</mat-toolbar>
-
+<app-toolbar></app-toolbar>
 <main>
   <div class="cards-options">
 
@@ -29,11 +8,6 @@
         <input matInput placeholder="Pesquisar">
         <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
-      <!-- <div class="formFindButton">
-        <button mat-icon-button color="primary">
-          <mat-icon matBadge="4" class="mat-18">notifications_active</mat-icon>
-        </button>
-      </div> -->
     </div>
 
     <div class="car-main">
@@ -77,7 +51,7 @@
           Text content
         </mat-card-content> -->
         <mat-card-actions align="start">
-          <button mat-flat-button color="accent">Abrir</button>
+          <button mat-flat-button color="accent" routerLink="abrir-chamado">Abrir</button>
         </mat-card-actions>
         <!-- <mat-card-footer>
           Footer
@@ -92,7 +66,8 @@
             <h1><strong>Verificar status dos meus chamados</strong></h1>
           </mat-card-title>
           <mat-card-subtitle><strong>
-              <h4 class="bg-card">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              <h4 class="bg-card">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the
                 industry's standard dummy text ever since the 1500s.</h4>
             </strong></mat-card-subtitle>
         </mat-card-header>
