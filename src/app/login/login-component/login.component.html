@@ -6,33 +6,34 @@
         <mat-card-title color="warn">Faça o Login em sua conta</mat-card-title>
         <!-- <mat-card-subtitle>Subtitle</mat-card-subtitle> -->
       </mat-card-header>
+      <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
       <img class="img-logo" mat-card-image src="../../../assets/logo.jpeg" alt="">
       <mat-card-content>
         <form class="form" [formGroup]="loginForm">
           <mat-form-field appearance="outline">
             <mat-label>Usuário</mat-label>
             <input matInput placeholder="Informe seu Usuário" required formControlName="usuario">
-
-            <!-- <mat-hint>Hint</mat-hint> -->
+            <mat-error *ngIf="this.loginForm.invalid">Campo obrigado</mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline">
             <mat-label>Senha</mat-label>
             <input matInput placeholder="Forneça sua senha" type="password" required formControlName="password">
-            <!-- <mat-hint>Hint</mat-hint> -->
+            <mat-error *ngIf="this.loginForm.invalid">Campo obrigado</mat-error>
           </mat-form-field>
         </form>
       </mat-card-content>
       <mat-card-actions>
-        <button (click)="ngSubmit()" type="submit" mat-raised-button color="primary">Logar</button>
+        <button (click)="ngSubmit()" type="submit" mat-raised-button color="primary" [disabled]="this.loginForm.invalid" >Logar</button>
       </mat-card-actions>
       <mat-card-footer>
         <mat-divider></mat-divider>
-        <button mat-raised-button class="btn-cadastrar" color="accent">Cadastrar-se</button>
+        <button mat-raised-button class="btn-cadastrar" color="accent" (click)="rotaRegistrar()">Cadastrar-se</button>
       </mat-card-footer>
     </mat-card>
   </section>
   <section class="section-secondary">
     <h1>Bem-vindo ao G-Service:</h1>
+    <br>
     <h1>Simplificando o Suporte, Acelerando Soluções</h1>
     <img class="img-login" src="../../../assets/login.svg" alt="">
   </section>

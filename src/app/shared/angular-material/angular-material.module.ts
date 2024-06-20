@@ -10,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatProgressBarModule } from '@angular/material/progress-bar'
 
 @NgModule({
   imports: [CommonModule],
@@ -23,7 +24,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatToolbarModule,
     MatMenuModule,
     MatBadgeModule,
-    MatStepperModule
+    MatStepperModule,
+    MatProgressBarModule
   ],
 })
 export class AngularMaterialModule {}
