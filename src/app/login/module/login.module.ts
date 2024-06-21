@@ -7,6 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RegistrarSeComponent } from '../registrar-se/registrar-se.component';
+import { MatCheckboxModule } from '@angular/material/checkbox'
+
 
 @NgModule({
   declarations: [LoginComponent, RegistrarSeComponent],
@@ -17,6 +19,7 @@ import { RegistrarSeComponent } from '../registrar-se/registrar-se.component';
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
+    MatCheckboxModule
   ],
 })
 export class LoginModule {}

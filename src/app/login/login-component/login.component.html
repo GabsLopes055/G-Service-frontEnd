@@ -21,6 +21,15 @@
             <mat-error *ngIf="this.loginForm.invalid">Campo obrigado</mat-error>
           </mat-form-field>
         </form>
+        <div class="funcoesUsuario">
+          <div class="manterConectado">
+            <mat-checkbox color="warn"></mat-checkbox>
+            <h6>Marter-me Conectado</h6>
+          </div>
+          <div class="esqueciMinhaSenha">
+            <h6>Esqueci minha senha</h6>
+          </div>
+        </div>
       </mat-card-content>
       <mat-card-actions>
         <button (click)="ngSubmit()" type="submit" mat-raised-button color="primary" [disabled]="this.loginForm.invalid" >Logar</button>

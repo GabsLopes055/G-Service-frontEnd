@@ -49,10 +49,10 @@ export class RegistrarSeComponent {
             }
           );
         },
-        error: () => {
+        error: (error) => {
           this.notificacao.error(
-            'Nome de usuário já esta em uso',
-            'Erro ao cadastrar Usuário !',
+            error.error.mensagem,
+            error.error.error,
             {
               timeOut: 5000,
               progressBar: true,
@@ -63,8 +63,8 @@ export class RegistrarSeComponent {
     }
   }
 
-  gerarNotificacao() {
-    alert("aqui")
+  voltarParaTelaDeLogin() {
+    this.router.navigate([''])
   }
 
 }

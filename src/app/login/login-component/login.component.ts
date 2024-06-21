@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent {
-
-  isLoading: boolean = true
+  isActive!: boolean;
+  isLoading: boolean = true;
   loginForm!: FormGroup;
   erroLogin: string = '';
 
@@ -22,7 +22,7 @@ export class LoginComponent {
     private service: LoginService,
     private router: Router
   ) {
-    this.isLoading = false
+    this.isLoading = false;
     this.loginForm = this.criarFormularioLogin();
   }
 
@@ -41,15 +41,8 @@ export class LoginComponent {
           this.loginForm.value.password
         )
         .subscribe({
-          next: () => {
-            this.notificacao.success(
-              'Login Realizado com sucesso !',
-              'Realizado Login',
-              {
-                timeOut: 5000,
-                progressBar: true,
-              }
-            );
+          next: (loginResponse) => {
+            this.router.navigate(['dashboard/main', loginResponse.token]);
           },
           error: () => {
             this.notificacao.error(
@@ -71,6 +64,14 @@ export class LoginComponent {
   }
 
   rotaRegistrar() {
-    this.router.navigate(['registrar'])
+    this.router.navigate(['registrar']);
+  }
+
+  ativarCheckBox() {
+    this.isActive = true;
+
+    if (this.isActive) {
+      this.isActive = false;
+    }
   }
 }

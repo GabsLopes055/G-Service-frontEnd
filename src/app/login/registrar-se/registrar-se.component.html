@@ -36,8 +36,11 @@
       <mat-card-actions>
         <button mat-raised-button class="btn-cadastrar" (click)="ngSubmit()" [disabled]="this.loginForm.invalid"
           color="accent">Cadastrar-se</button>
-
       </mat-card-actions>
+      <mat-divider></mat-divider>
+      <mat-card-footer>
+        <button mat-raised-button class="btn-voltar" (click)="voltarParaTelaDeLogin()" color="warn">Voltar</button>
+      </mat-card-footer>
     </mat-card>
   </section>
   <section class="section-secondary">

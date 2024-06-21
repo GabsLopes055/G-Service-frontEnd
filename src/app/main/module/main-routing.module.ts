@@ -6,15 +6,15 @@ import { CriarChamadoComponent } from '../components/criar-chamado/criar-chamado
 
 const routes: Routes = [
   {
-    path: 'main',
+    path: 'main/:token',
     component: MainComponent,
   },
   {
-    path: 'main/abrir-chamado',
+    path: 'main/:token/abrir-chamado',
     component: AbrirChamadosComponent
   },
   {
-    path: 'main/abrir-chamado/chamado',
+    path: 'main/:token/abrir-chamado/chamado',
     component: CriarChamadoComponent
   }
 ];
