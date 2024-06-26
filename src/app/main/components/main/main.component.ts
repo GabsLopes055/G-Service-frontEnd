@@ -8,4 +8,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MainComponent {
 
+  usuarioLogado: any = "";
+
+  constructor() {
+    this.usuarioLogado = sessionStorage.getItem("usuario-logado")
+  }
+
 }

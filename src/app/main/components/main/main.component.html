@@ -3,11 +3,18 @@
   <div class="cards-options">
 
     <div class="formFind">
-      <mat-form-field appearance="outline">
-        <mat-label>Pesquisar</mat-label>
-        <input matInput placeholder="Pesquisar">
-        <mat-icon matSuffix>search</mat-icon>
-      </mat-form-field>
+
+      <div class="usuario">
+        <h1>Olá, {{this.usuarioLogado}} 🙂</h1>
+      </div>
+
+      <div class="formPesquisar">
+        <mat-form-field appearance="outline">
+          <mat-label>Pesquisar</mat-label>
+          <input matInput placeholder="Pesquisar">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+      </div>
     </div>
 
     <div class="car-main">

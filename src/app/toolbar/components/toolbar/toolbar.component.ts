@@ -13,6 +13,7 @@ export class ToolbarComponent {
   }
 
   voltarParaDashboard() {
-    this.router.navigate(['dashboard/main'])
+    sessionStorage.clear()
+    this.router.navigate([''])
   }
 }
