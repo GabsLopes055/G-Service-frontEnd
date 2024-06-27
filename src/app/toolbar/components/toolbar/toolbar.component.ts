@@ -7,13 +7,14 @@ import { Router } from '@angular/router';
   styleUrl: './toolbar.component.scss',
 })
 export class ToolbarComponent {
-
-  constructor(private router: Router){
-
-  }
+  constructor(private router: Router) {}
 
   voltarParaDashboard() {
-    sessionStorage.clear()
-    this.router.navigate([''])
+    this.router.navigate(['dashboard/main', sessionStorage.getItem('token')])
+  }
+
+  sair() {
+    sessionStorage.clear();
+    this.router.navigate(['']);
   }
 }

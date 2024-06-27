@@ -1,3 +1,4 @@
+import { NotificacaoService } from './../../shared/notificacao/notificacao.service';
 import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
@@ -18,7 +19,7 @@ export class LoginComponent {
 
   constructor(
     private formBuilder: FormBuilder,
-    private notificacao: ToastrService,
+    private notificacao: NotificacaoService,
     private service: LoginService,
     private router: Router
   ) {
@@ -45,21 +46,17 @@ export class LoginComponent {
             this.router.navigate(['dashboard/main', loginResponse.token]);
           },
           error: () => {
-            this.notificacao.error(
-              'Erro ao realizar login',
-              'Usuário ou senha inválidos !',
-              {
-                timeOut: 5000,
-                progressBar: true,
-              }
+            this.notificacao.notificacaoError(
+              'Erro ao realizar login !',
+              'Usuário ou senha inválidos !'
             );
           },
         });
     } else {
-      this.notificacao.error('Preencha o formulário corretamente !', 'Erro', {
-        timeOut: 5000,
-        progressBar: true,
-      });
+      this.notificacao.notificacaoAviso(
+        'Aviso',
+        'Preencha o formulário corretamente !'
+      );
     }
   }
 

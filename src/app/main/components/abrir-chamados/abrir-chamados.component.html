@@ -5,22 +5,22 @@
     <!-- <h1>aqui</h1> -->
   </div>
 
-  <div class="cards">
-    <mat-card>
+  <div class="cards" >
+    <mat-card *ngFor="let fila of filasAtendimento">
       <mat-card-header>
-        <mat-card-title>Title</mat-card-title>
-        <mat-card-subtitle>Subtitle</mat-card-subtitle>
+        <mat-card-title><h2><strong>{{fila.nomeFila}}</strong></h2></mat-card-title>
+        <!-- <mat-card-subtitle>Subtitle</mat-card-subtitle> -->
       </mat-card-header>
       <!-- <img matCardImage src="Card wide image source"> -->
       <mat-card-content>
-        Text content
+        <!-- Text content -->
       </mat-card-content>
       <mat-card-actions align="start">
-        <button mat-button routerLink="chamado">Action1</button>
+        <button mat-raised-button color="accent" routerLink="chamado">Acessar</button>
 
       </mat-card-actions>
       <mat-card-footer>
-        Footer
+        <!-- Footer -->
       </mat-card-footer>
     </mat-card>
 

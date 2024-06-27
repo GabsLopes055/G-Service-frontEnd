@@ -1,7 +1,7 @@
+import { filaAtendimento } from './../../../shared/models/filaAtendimento';
 import { Component } from '@angular/core';
-import { filaAtendimento } from '../../../shared/models/filaAtendimento';
 import { AbrirChamadoServiceService } from './service/abrir-chamado-service.service';
-import { ToastrService } from 'ngx-toastr';
+import { NotificacaoService } from '../../../shared/notificacao/notificacao.service';
 
 @Component({
   selector: 'app-abrir-chamados',
@@ -13,16 +13,14 @@ export class AbrirChamadosComponent {
 
   constructor(
     private service: AbrirChamadoServiceService,
-    private notificacao: ToastrService
+    private notificacao: NotificacaoService
   ) {
-    this.listarTodasFilasAtendimento()
+    this.listarTodasFilasAtendimento();
   }
 
   listarTodasFilasAtendimento() {
-    this.service.listarTodasFilasAtendimento().subscribe({
-      next(value) {
-        console.log(value);
-      },
+    this.service.listarTodasFilasAtendimento().subscribe((value) => {
+      this.filasAtendimento = value;
     });
   }
 }
